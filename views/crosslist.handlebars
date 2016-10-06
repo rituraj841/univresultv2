@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+{{>head}}
+</head>
+<body>
+{{>menu}}
+ <div class="container">
+   <div class="row">
+		<div align="center">
+			<H2>All Students Tabular Marksheet </H2>
+      <a href="/marksentryform">
+        <span class="glyphicon glyphicon-plus"></span>Marks Entry
+      </a>
+
+      <div class="table-responsive">     
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Roll</th>
+              <th>Name</th>
+              <th>Physics</th>
+              <th>Chemistry</th>
+              <th>Maths</th>
+              <th>Computer</th>
+              <th>Total Marks</th>
+              <th>Division</th>
+            </tr>
+          </thead>
+          <tbody>
+          {{#each marks}}
+          <tr>
+              <td>{{this.roll}}</td>
+              <td>{{this.xname}}</td>
+              <td>{{this.physics}}</td>
+              <td>{{this.chemistry}}</td>
+              <td>{{this.maths}}</td>
+              <td>{{this.computer}}</td>
+              <td>{{this.totalmarks}}</td>
+              <td>{{this.division}}</td>
+              <td><a href='/edit?rollnumber={{this.roll}}'>
+                <span class="glyphicon glyphicon-pencil"></span>
+              </a></td>
+              <td><a href='/delete?rollnumber={{this.roll}}'>
+                <span class="glyphicon glyphicon-remove"></span>
+              </a></td>
+          </tr>
+          {{/each}}
+          </tbody>
+        </table>
+        <a href="/marksentryform">
+          <span class="glyphicon glyphicon-plus"></span>Marks Entry
+        </a>
+      </div>
+		</div>
+		<br/>
+    </div>
+ </div>
+ 
+  {{>jsIncludes}}
+</body>
+</html>

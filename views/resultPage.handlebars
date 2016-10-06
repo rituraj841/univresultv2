@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+{{>head}}
+<body>
+{{>menu}}    
+<br><br><br>
+<div class="container">
+    <div class="row">
+       <div class="well">
+            <h2> Scorecard <h2>
+            <h4> Name:  {{marks.xname}} </h4>
+            <h4>Roll: {{marks.roll}}</h4>
+
+			<table class="table">
+			  <tr>
+			    <td><p>Physics:  {{marks.physics}}</p></td>
+			  </tr>
+			  <tr>
+			    <td><p>Chemistry: {{marks.chemistry}}</p></td>		
+			  </tr>
+			  <tr>
+			    <td><p>Mathematics: {{marks.maths}}</p></td>
+			  </tr>
+			  <tr>
+			    <td><p>Computer:  {{marks.computer}}</p></td>
+			    </tr>
+			  <tr>
+			    <td><p>Total Marks: {{marks.totalmarks}}</p></td>
+			  </tr>
+			</table>
+		</div>
+    </div>
+</div>
+
+{{>jsIncludes}}
+</body>
+</html>

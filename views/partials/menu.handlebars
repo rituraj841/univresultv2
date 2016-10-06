@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<div class="navbar navbar-default navbar-fixed-top">
+      <div class="container">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+              <span class="icon-bar" ></span>
+              <span class="icon-bar" ></span>
+              <span class="icon-bar" ></span>
+           </button>
+           <a href="/" class="navbar-brand"><span class="glyphicon glyphicon-globe">University Results</a>
+          </div>
+
+          <div class="navbar-collapse collapse">
+              <ul class="nav navbar-nav">
+              <li><a href="#"><span class="glyphicon glyphicon-eye-open">Hi {{LOGGED_USER_NAME}}!</a></li>
+              {{#if AUTHENTICATED}}
+                 {{#if IS_ADMIN}}
+                    <li><a href="/crosslist"><span class="glyphicon glyphicon-list-alt">Cross-list</a></li>
+                 {{/if}}
+                 <li><a href="/resultform"><span class="glyphicon glyphicon-pushpin">Scorecard</a></li>
+                 <li><a href="/logout"><span class="glyphicon glyphicon-log-out">Logout</a></li>              
+              {{else}}
+                <li><a href="/">Login</a></li>
+                <li><a href="/registerForm">Register New User</a></li>
+              {{/if}}
+              </ul>
+          </div>
+      </div>
+</div>

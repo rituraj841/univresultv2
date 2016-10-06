@@ -1,0 +1,40 @@
+<html>
+<head>
+{{>head}}
+</head>
+<body>
+{{>menu}}
+ <div class="container">
+	<div class="row">
+		<h1 align="center" class="margin-base-vertical">Use This Page to Submit Result Data</h1>	  	
+    <form method="post" action="/marksEntry">
+      <fieldset>
+        <legend>Personal information:</legend>
+        <h4>Student Name:</h4>
+        <input type="text" name="nm" required class="form-control input-sm" placeholder="Name">
+        <br>
+        <h4>Roll No.:</h4>
+        <input type="number" name="roll" required class="form-control input-sm" placeholder="Roll">
+        <br>
+       
+        <legend>Academic Scorecard</legend>
+        <h3>Subjectwise Marks:</h3><br>
+        <h4>Physics:</h4>
+        <input type="text" name="physics" required class="form-control input-sm" placeholder="Physics">
+        <br>
+        <h4>Chemistry:</h4>
+        <input type="text" name="chemistry" required class="form-control input-sm" placeholder="Chemistry">
+        <br>
+        <h4>Maths:</h4>
+        <input type="text" name="maths" required class="form-control input-sm" placeholder="Maths">
+        <br>
+        <h4>Computer Programming:</h4>
+        <input type="text" name="computer" required class="form-control input-sm" placeholder="Computer Programming">
+        <br>
+        <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+	
+{{>jsIncludes}}
+</body>
+</html>

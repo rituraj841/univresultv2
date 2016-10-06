@@ -1,0 +1,23 @@
+{
+  "name": "univresult v 2",
+  "version": "2.0.0",
+  "description": "mongo",
+  "main": "app.js",
+  "scripts": {
+    "test": "nodemon app.js"
+  },
+  "keywords": [
+    "node",
+    "cloud"
+  ],
+  "author": "golu",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "chalk": "^1.1.3",
+    "express": "^4.13.3",
+    "express-handlebars": "latest",
+    "express-session": "^1.12.1",
+    "mongoose": "latest"
+  }
+}

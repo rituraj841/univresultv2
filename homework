@@ -1,0 +1,6 @@
+exports.registerUserHandler = function(req, res){
+Compare with 6schCreate.js
+
+
+db.js exports.landingPageHandler = function (req, res){ 
+  compare with 5schFind1.js+++++......

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+{{>head}}
+</head>
+<body>
+{{>menu}}
+<div class="container">
+  <div class="row">
+  <br><br><br>
+  <form class="margin-base-vertical" method="post" action="/saveChanges">
+      <p class="input-group ">
+      Roll : <input type="text" class="form-control input-lg" name="roll" readonly value="{{marksRec.roll}}" />
+      </p>
+      <p class="input-group ">
+      Name : <input type="text" class="form-control input-lg" name="name" readonly value="{{marksRec.xname}}" />
+      </p>
+      <p class="input-group ">
+      Physics : <input type="text" class="form-control input-lg" name="physics"  value="{{marksRec.physics}}" />
+      </p>
+      <p class="input-group ">
+      Chemistry : <input type="text" class="form-control input-lg" name="chemistry"  value="{{marksRec.chemistry}}" />
+      </p>
+      <p class="input-group ">
+      Maths : <input type="text" class="form-control input-lg" name="maths"  value="{{marksRec.maths}}" />
+      </p>
+      <p class="input-group ">
+      Computer : <input type="text" class="form-control input-lg" name="computer"  value="{{marksRec.computer}}" />
+      </p>
+      <p class="input-group ">
+      Total Marks : <input type="text" class="form-control input-lg" name="totalmarks" readonly value="{{marksRec.totalmarks}}" />
+      </p>
+      <p class="input-group ">
+      Division: <input type="text" required class="form-control input-lg" name="division" readonly value="{{marksRec.division}}" />
+      </p><br/>
+      <p class="text-center">
+      <button type="submit" class="btn btn-success btn-lg">Submit Changes</button>
+      </p>
+  </form>
+ </div>
+</div>
+
+  {{>jsIncludes}}
+</body>
+</html>

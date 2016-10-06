@@ -1,0 +1,29 @@
+<html>
+<head>
+{{>head}}
+</head>
+<body>
+{{>menu}}
+<div class="container">
+  <div class="jumbotron">
+     <h3> Get Scorecard </h3>
+          <form method="post" action="/resultpage">
+          {{#if IS_ADMIN }}
+            <label for="roll">Your Roll number</label>
+            <input type="text" required class="form-control input-lg" name="roll" 
+            placeholder="Enter your roll number" />
+          {{else}}
+            <label for="roll">Your Roll number</label>
+            <input type="text" required class="form-control input-lg" name="roll" 
+            readonly value={{USER_ROLL}} />            
+          {{/if}} 
+          <BR/>    
+          <input type="submit" class="btn btn-primary btn-lg"/>
+          <BR/>
+      </form>
+       
+  </div>
+  </div>
+{{>jsIncludes}}
+</body>
+</html>

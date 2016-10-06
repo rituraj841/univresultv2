@@ -1,0 +1,39 @@
+<html>
+<head>	
+{{>head}}
+</head>
+<body>
+<div class="container">
+   <div class="row">
+   <br><br><br>
+   <div class="col-md-4 col-md-offset-4 panel panel-default">
+		<h3 align="center" class="margin-base-vertical">Log In </h3>
+   	<h4>{{LoginMessage}}</h4>
+   	<div class="col-md-12">
+		<form class="margin-base-vertical" method="post" action="/authenticate">
+	          <p class="input-group ">
+				<span class="input-group-addon"><span class="icon-user"></span></span>
+				<input type="text" required class="form-control input-lg" name="nm" placeholder="Login Name" />
+			  </p>
+	          <p class="input-group ">
+				<span class="input-group-addon"><span class="icon-key"></span></span>
+				<input type="password" required class="form-control input-lg" name="pwd" placeholder="Password" />
+			  </p>
+	          <br/>
+			  <p class="text-center">
+				<button type="submit" class="btn btn-success btn-lg">Get In</button>
+			  </p>
+			  	<p class="text-center">
+				<a href="/registerForm">Register</a> /
+				<a href="/forgotForm">Forgot Password</a>
+			 </p>
+		</form>
+	</div>
+	<br><br>
+
+   </div>
+ </div>
+
+{{>jsIncludes}}
+</body>
+</html>
